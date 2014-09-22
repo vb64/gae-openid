@@ -1,4 +1,4 @@
-gae-openid
+GAE-Openid
 ==========
 
-python/django library for authorization with Wargaming OpenID
+Google App Engine python/django library for authorization with Wargaming OpenID
