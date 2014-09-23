@@ -48,7 +48,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(ROOT_PROJECT, 'tpl'),
+    'tpl',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
