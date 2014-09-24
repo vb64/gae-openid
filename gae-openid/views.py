@@ -1,4 +1,3 @@
-# vim:ts=2:sw=2:expandtab
 import datetime, urllib, urlparse, logging
 
 import django.core.urlresolvers

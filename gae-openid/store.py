@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import time, md5
 
 from openid.association import Association as xAssociation

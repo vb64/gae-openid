@@ -11,6 +11,14 @@
 
 <body>
 
+{% if openid %}
+
+<h1>You are logged as</h1>
+<p><strong>{{openid}}</strong></p>
+<p><a href="/logout">Logout</a></p>
+
+{% else %}
+
 <h1>Select Wargaming server for OpenID auth</h1>
 
 <ul>
@@ -19,6 +27,8 @@
   <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://eu.wargaming.net/id/">Europe</a></li>
   <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://asia.wargaming.net/id/">Southeast Asia</a></li>
 </ul>
+
+{% endif %}
 
 </body>
 
