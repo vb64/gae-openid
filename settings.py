@@ -41,8 +41,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-#    'gae.openid.middleware.OpenIDMiddleware',
+    'gae-openid.middleware.OpenIDMiddleware',
 )
 
 ROOT_URLCONF = 'urls'

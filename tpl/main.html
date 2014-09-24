@@ -14,10 +14,10 @@
 <h1>Select Wargaming server for OpenID auth</h1>
 
 <ul>
-  <li><a href="https://ru.wargaming.net/id/">Russia</a></li>
-  <li><a href="https://na.wargaming.net/id/">North America</a></li>
-  <li><a href="https://eu.wargaming.net/id/">Europe</a></li>
-  <li><a href="https://asia.wargaming.net/id/">Southeast Asia</a></li>
+  <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://ru.wargaming.net/id/">Russia</a></li>
+  <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://na.wargaming.net/id/">North America</a></li>
+  <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://eu.wargaming.net/id/">Europe</a></li>
+  <li><a href="{% url openid_start %}?continue=/&openid_identifier=https://asia.wargaming.net/id/">Southeast Asia</a></li>
 </ul>
 
 </body>
