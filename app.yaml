@@ -6,9 +6,6 @@ threadsafe: true
 
 default_expiration: "30d"
 
-inbound_services:
-- warmup
-
 libraries:
 - name: django
   version: "1.4"
@@ -22,10 +19,6 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
   mime_type: image/x-icon
-
-- url: /_ah/warmup
-  login: admin 
-  script: wsgi.app
 
 - url: /.*
   script: wsgi.app
