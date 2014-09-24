@@ -9,7 +9,7 @@ from django.conf import settings
 from openid.consumer.consumer import Consumer, SUCCESS as auth_SUCCESS
 from openid.consumer import discover
 
-import store, error
+import store
 
 COOKIE_NAME = 'openidgae_sess'
 if hasattr(settings, 'OPENIDGAE_COOKIE_NAME'):
