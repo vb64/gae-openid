@@ -4,5 +4,5 @@ import views
 urlpatterns = patterns('',
   url(r'^$', views.mainpage),
   url(r'^_ah/warmup$', views.mainpage),
-  url(r'^openid/', include('gaeopenid.urls'), {'success_handler': '!!!'}),
+  url(r'^openid/', include('gaeopenid.urls'), {'success_handler': views.success_handler}),
 )

@@ -99,10 +99,8 @@ def OpenIDFinish(request, default_success_url='/', success_handler=None):
       continueUrl = get_continue_url(request, default_success_url)
       response = django.http.HttpResponseRedirect(continueUrl)
 
-      logging.warning("OpenIDFinish success_handler: %s" % success_handler)
-      logging.warning("OpenIDFinish openid_url: %s" % openid_url)
-      #if success_handler:
-      #  success_handler(request, response, {'openid': openid_url})
+      if success_handler:
+        success_handler(request, response, openid_url)
 
       return response
 
