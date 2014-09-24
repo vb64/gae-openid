@@ -34,11 +34,11 @@ def err_page(err_id, msg=''):
   return django.http.HttpResponseRedirect(django.core.urlresolvers.reverse(ErrorPage, kwargs={'err_id': err_id, } ))
 
 ############## Handlers #################
-def ErrorPage(request, err_id):
+def ErrorPage(request, err_id, success_handler=None):
   return django.http.HttpResponse(err_id)
 
 @csrf_exempt
-def OpenIDStartSubmit(request, default_success_url='/'):
+def OpenIDStartSubmit(request, default_success_url='/', success_handler=None):
   response = django.http.HttpResponse()
   openid = request.REQUEST.get('openid_identifier', '').strip()
   if not openid:
@@ -109,7 +109,7 @@ def OpenIDFinish(request, default_success_url='/', success_handler=None):
     else:
       return err_page("verification_failed")
 
-def RelyingPartyXRDS(request):
+def RelyingPartyXRDS(request, success_handler=None):
   response = django.http.HttpResponse()
   url_finish = django.core.urlresolvers.reverse(OpenIDFinish)
   if request.method == 'GET':
