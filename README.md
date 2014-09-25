@@ -15,30 +15,34 @@ Usage in your Django App:
 
 1. Define handler for success OpenID auth as:
 
+```
 def success_handler(request, response, openid_url)
+```
 
 where request, response are the standard django objects, and openid_url is a auth data from wargaming.
 
 2. Include library urls handlers and your function from step 1  into your url.py. For example:
 
-...
-
+```
 urlpatterns = patterns('',
+    ...
     url(r'^openid/', include('gae-openid.urls'), {'success_handler': module.success_handler}),
+    ...
 )
-
-...
+```
 
 3. Add library middleware module into your settings.py:
 
+```
 MIDDLEWARE_CLASSES = (
-
     ...
     'gae-openid.middleware.OpenIDMiddleware',
     ...
-
 )
+```
 
 Into templates, for entry point to wargaming OpenID auth, you can use, for example:
 
+```
 {% url openid_start %}?continue=/&openid_identifier=https://ru.wargaming.net/id/
+```
