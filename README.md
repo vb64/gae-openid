@@ -21,13 +21,15 @@ where request, response are the standard django objects, and openid_url is a aut
 
 2. Include library urls handlers and your function from step 1  into your url.py. For example:
 
-urlpatterns = patterns('',
+...
 
+urlpatterns = patterns('',
     ...
     url(r'^openid/', include('gae-openid.urls'), {'success_handler': module.success_handler}),
     ...
-
 )
+
+...
 
 3. Add library middleware module into your settings.py:
 
