@@ -13,7 +13,7 @@ Main difference from google-app-engine-django-openid is a using GAE memcache for
 
 **Usage in your Django App**
 
-1.Define handler for success OpenID auth as:
+**1.** Define handler for success OpenID auth as:
 
 ```
 def success_handler(request, response, openid_url)
@@ -21,10 +21,9 @@ def success_handler(request, response, openid_url)
 
 where request, response are the standard django objects, and openid_url is a auth data from wargaming.
 
-2.Include library urls handlers and your function from step 1 into your url.py. 
+**2.** Include library urls handlers and your function from step 1 into your url.py. 
 
 For example:
-
 
 ```
 urlpatterns = patterns('',
@@ -34,7 +33,7 @@ urlpatterns = patterns('',
 )
 ```
 
-3.Add library middleware module into your settings.py:
+**3.** Add library middleware module into your settings.py:
 
 ```
 MIDDLEWARE_CLASSES = (
