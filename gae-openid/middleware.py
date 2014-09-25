@@ -1,5 +1,3 @@
-# vim:ts=2:sw=2:et
-#
 # Google App Engine OpenID Consumer Django App
 # http://code.google.com/p/google-app-engine-django-openid/
 #
@@ -21,6 +19,11 @@
 import logging
 import django.core.urlresolvers
 from google.appengine.api import urlfetch
+
+import sys, os
+opeid_lib = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'openid.zip')
+if opeid_lib not in sys.path:
+  sys.path.insert(0, opeid_lib)
 
 import openid
 import views

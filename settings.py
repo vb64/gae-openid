@@ -3,12 +3,6 @@ DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Admin', 'vit.sar68@gmail.com'),
-)
-
-MANAGERS = ADMINS
-
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
