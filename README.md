@@ -1,6 +1,8 @@
 GAE-OpenID
 ==========
 
+[Live version](http://openid-gae.appspot.com) of this code.
+
 Django library for authorization with Wargaming OpenID on Google App Engine platform.
 
 based on: 
@@ -36,5 +38,3 @@ MIDDLEWARE_CLASSES = (
 Into templates, for entry point to wargaming OpenID auth, you can use, for example:
 
 {% url openid_start %}?continue=/&openid_identifier=https://ru.wargaming.net/id/
-
-[Live version](http://openid-gae.appspot.com) of this code.
