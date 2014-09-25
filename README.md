@@ -11,7 +11,7 @@ based on:
 
 Main difference from google-app-engine-django-openid is a using GAE memcache for saving openid session data, instead GAE datastore tables. So don't need db tables for this purpose, and their periodically cleanup.
 
-Usage in your Django App:
+**Usage in your Django App**
 
 1. Define handler for success OpenID auth as:
 
@@ -21,7 +21,7 @@ def success_handler(request, response, openid_url)
 
 where request, response are the standard django objects, and openid_url is a auth data from wargaming.
 
-2. Include library urls handlers and your function from step 1  into your url.py. For example:
+2. Include library urls handlers and your function from step 1 into your url.py. For example:
 
 ```
 urlpatterns = patterns('',
