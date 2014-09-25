@@ -5,8 +5,10 @@ GAE-OpenID
 
 Django library for authorization with Wargaming OpenID on Google App Engine platform.
 
-based on: 
+based on:
+
 [demand.openid.net](https://code.google.com/p/demand/) included as zip archive.
+
 [google-app-engine-django-openid](https://code.google.com/p/google-app-engine-django-openid/)
 
 Main difference from google-app-engine-django-openid is a using GAE memcache for saving openid session data, instead GAE datastore tables. So don't need db tables for this purpose, and their periodically cleanup.
