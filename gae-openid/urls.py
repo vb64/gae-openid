@@ -1,17 +1,5 @@
-import sys
-import os
-
 from django.conf.urls.defaults import patterns, url
-
 import views
-
-opeid_lib = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    'openid.zip'
-)
-
-if opeid_lib not in sys.path:
-    sys.path.insert(0, opeid_lib)
 
 urlpatterns = patterns(
     '',

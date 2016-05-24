@@ -16,24 +16,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import sys
-import os
 import logging
 
 import django.core.urlresolvers
 from google.appengine.api import urlfetch
 
 import views
-
-opeid_lib = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    'openid.zip'
-)
-
-if opeid_lib not in sys.path:
-    sys.path.insert(0, opeid_lib)
-
-import openid   # noqa
+import openid
 
 
 class UrlfetchFetcher(openid.fetchers.HTTPFetcher):
